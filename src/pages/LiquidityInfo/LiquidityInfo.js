@@ -5,11 +5,9 @@ import { CoinContext } from '../../context/CoinContext';
 function LiquidityInfo() {
     const context = useContext(CoinContext)
 
-    let chartData = {
-        data: [],
-        coinData: context.data
-    };
-    chartData.data = context.data.map(coinData => {
+    let data = [];
+
+    data = context.data.map(coinData => {
         return {
             rank: coinData.cmc_rank,
             name: coinData.name,
@@ -21,7 +19,7 @@ function LiquidityInfo() {
 
     return (
         <div>
-            <ChartComponent data={chartData}/>
+            <ChartComponent data={data}/>
         </div>
     )
 }

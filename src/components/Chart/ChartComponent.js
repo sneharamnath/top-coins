@@ -45,8 +45,8 @@ export default function ChartComponent({ data }) {
                     <YAxis type="number" dataKey="y" name="Volume" />
                     <ZAxis type="number" dataKey="z" name="Price Change" />
                     <Tooltip content={<CustomTooltip />} />
-                    <Scatter name="Liquidity" data={data.data} fill="#8884d8">
-                        {data.data.map((entry, index) => (
+                    <Scatter name="Liquidity" data={data} fill="#8884d8">
+                        {data.map((entry, index) => (
                             <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                         ))}
                     </Scatter>
