@@ -4,19 +4,24 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import NavbarComponent from './components/Navbar/NavbarComponent';
 import CoinsBoard from './pages/CoinsBoard/CoinsBoard';
 import LiquidityInfo from './pages/LiquidityInfo/LiquidityInfo';
+import CoinContextProvider from './context/CoinContext';
+import SelectComponent from './components/Select/SelectComponent';
 
 
 function App() {
   return (
-    <BrowserRouter>
-      <div>
-        <NavbarComponent />
-      </div>
-      <Routes>
-        <Route path="/liquidity" element={<LiquidityInfo />} />
-        <Route path="/" element={<CoinsBoard />} />
-      </Routes>
-    </BrowserRouter>
+    <CoinContextProvider>
+      <BrowserRouter>
+        <div>
+          <NavbarComponent />
+          <SelectComponent />
+        </div>
+        <Routes>
+          <Route path="/" element={<CoinsBoard />} />
+          <Route path="/liquidity" element={<LiquidityInfo />} />
+        </Routes>
+      </BrowserRouter>
+    </CoinContextProvider>
   );
 }
 
