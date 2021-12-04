@@ -8,7 +8,6 @@ const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "pink"];
 
 const CustomTooltip = props => {
     if (props.payload[0] != null) {
-        console.log(props);
         const newPayload = [
             {
                 name: 'Name',

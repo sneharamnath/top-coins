@@ -1,6 +1,7 @@
 import './Select.css';
 import React, { useContext } from 'react'
 import { CoinContext } from '../../context/CoinContext';
+import { coinLimits } from '../../global';
 
 function SelectComponent() {
     const context = useContext(CoinContext)
@@ -9,14 +10,16 @@ function SelectComponent() {
         context.setCount(e.target.value);
     }
 
+    const renderOptions = coinLimits.map((limit, index) => {
+        return (<option key={index} value={limit.value}>{limit.label}</option>)
+    })
+
     return (
         <form className="pure-form pure-form-stacked">
             <div className="flex">
                 <label htmlFor="count">Select Size:</label>
                 <select name="count" className="select-container pure-input" onChange={handleSelect}>
-                    <option value="10">10</option>
-                    <option value="50">50</option>
-                    <option value="all">All</option>
+                    {renderOptions}
                 </select>
             </div>
         </form>
