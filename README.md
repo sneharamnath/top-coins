@@ -27,6 +27,12 @@ This app allows the users to view the analysis of top coins. The app allows the 
 
   1. View the data of top 'n' coins in a tabular format.
   2. View the data of top 'n' coins in form of a graph (Scatter graph).
+ 
+      The scatter chart shows the follwoing data: 
+      
+      * __*X axis*__ - is Market Capitalization
+      * __*Y axis*__ -  is Volume (24h)
+      * __*Z axis*__ -  (or size of the point) is absolute price change (24h)
   3. Allows the user to set a limit on the data they want to view. This is a global setting and the changes will be reflected in table data and graph data.  
 
 ## Technology and Tools
