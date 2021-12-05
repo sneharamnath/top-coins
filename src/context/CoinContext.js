@@ -8,22 +8,26 @@ function CoinContextProvider(props) {
     const [topCoins, setTopCoins] = useState([])
     const [count, setCount] = useState(10);
 
-    useEffect(() => {
+    const getCoinData = () => {
         let qs = (count !== 'all') ? `?limit=${count}` : ``
         const url = `${apiEndPoints.getCoinsData}${qs}`
         axios.get(url, {
-            headers: { "X-CMC_PRO_API_KEY": process.env.REACT_APP_CMC_API_KEY}
+            headers: { "X-CMC_PRO_API_KEY": process.env.REACT_APP_CMC_API_KEY }
         }).then((response) => {
             setTopCoins(response.data.data)
         })
-    }, [count]);
+    }
+
+    useEffect(() => {
+        getCoinData();
+    }, [count])
 
     return (
-        <div>
+        <React.Fragment>
             <CoinContext.Provider value={{ data: topCoins, count, setCount }}>
                 {topCoins.length ? props.children : 'Loading...'}
             </CoinContext.Provider>
-        </div>
+        </React.Fragment>
     )
 }
 

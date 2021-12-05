@@ -17,8 +17,8 @@ function SelectComponent() {
     return (
         <form className="pure-form pure-form-stacked">
             <div className="flex">
-                <label htmlFor="count">Select Size:</label>
-                <select name="count" className="select-container pure-input" onChange={handleSelect}>
+                <label className="mr-1" htmlFor="count">Show Rows:</label>
+                <select name="count" className="pure-input" onChange={handleSelect}>
                     {renderOptions}
                 </select>
             </div>
