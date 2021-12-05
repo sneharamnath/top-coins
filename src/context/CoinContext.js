@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
+import { apiEndPoints } from '../constants/global';
 
 export const CoinContext = React.createContext();
 
@@ -9,8 +10,9 @@ function CoinContextProvider(props) {
 
     useEffect(() => {
         let qs = (count !== 'all') ? `?limit=${count}` : ``
-        axios.get(`/api/cryptocurrency/listings/latest${qs}`, {
-            headers: { "X-CMC_PRO_API_KEY": "db280a8b-ef49-4db3-bc70-fb7c451e597b" }
+        const url = `${apiEndPoints.getCoinsData}${qs}`
+        axios.get(url, {
+            headers: { "X-CMC_PRO_API_KEY": process.env.REACT_APP_CMC_API_KEY}
         }).then((response) => {
             setTopCoins(response.data.data)
         })

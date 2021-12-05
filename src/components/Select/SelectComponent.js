@@ -1,7 +1,7 @@
 import './Select.css';
 import React, { useContext } from 'react'
 import { CoinContext } from '../../context/CoinContext';
-import { coinLimits } from '../../global';
+import { coinLimits } from '../../constants/global';
 
 function SelectComponent() {
     const context = useContext(CoinContext)

@@ -12,10 +12,10 @@ function App() {
   return (
     <CoinContextProvider>
       <BrowserRouter>
-        <div>
+        <>
           <NavbarComponent />
           <SelectComponent />
-        </div>
+        </>
         <Routes>
           <Route path="/" element={<CoinsBoard />} />
           <Route path="/liquidity" element={<LiquidityInfo />} />

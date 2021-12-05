@@ -5,3 +5,9 @@ export const coinLimits = [
     { label: 50, value: '50' },
     { label: 'All', value: 'all' }
 ]
+
+export const chartColors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "pink"];
+
+export const apiEndPoints = {
+    getCoinsData: '/api/cryptocurrency/listings/latest'
+}

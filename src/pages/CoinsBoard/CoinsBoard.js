@@ -1,7 +1,7 @@
 import './CoinsBoard.css'
 import React, { useContext } from 'react';
 import { CoinContext } from '../../context/CoinContext';
-import { coinTableHeaders } from '../../global';
+import { coinTableHeaders } from '../../constants/global';
 
 
 function CoinsBoard() {

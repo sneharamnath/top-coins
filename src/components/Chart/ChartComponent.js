@@ -2,9 +2,7 @@ import './Chart.css';
 import React from 'react';
 import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, Cell, ResponsiveContainer, ZAxis } from 'recharts';
 import { DefaultTooltipContent } from 'recharts/lib/component/DefaultTooltipContent';
-
-
-const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "pink"];
+import {chartColors} from '../../constants/global';
 
 const CustomTooltip = props => {
     if (props.payload[0] != null) {
@@ -46,7 +44,7 @@ export default function ChartComponent({ data }) {
                     <Tooltip content={<CustomTooltip />} />
                     <Scatter name="Liquidity" data={data} fill="#8884d8">
                         {data.map((entry, index) => (
-                            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                            <Cell key={`cell-${index}`} fill={chartColors[index % chartColors.length]} />
                         ))}
                     </Scatter>
                 </ScatterChart>
