@@ -14,7 +14,7 @@ Simple analysis of crypto assets React App.
 
 1. Clone the project using HTTPS: `https://github.com/sneharamnath/top-coins.git` 
    or SSH `git@github.com:sneharamnath/top-coins.git`
-2. `cd top-coins` - Switch to project directory in the directory cloned 
+2. `cd top-coins` - Switch to project directory in the directory cloned.
 3. `npm install` - Install the dependencies required in the app.
 4. `npm start` - Runs the app in the development mode.
     
@@ -25,13 +25,13 @@ Simple analysis of crypto assets React App.
 
 This app allows the users to view the analysis of top coins. The app allows the user to do the following:
 
-  1. View the data of coins in a tabular format.
-  2. View the data of coins in form of a graph (Scatter graph).
+  1. View the data of top 'n' coins in a tabular format.
+  2. View the data of top 'n' coins in form of a graph (Scatter graph).
   3. Allows the user to set a limit on the data they want to view. This is a global setting and the changes will be reflected in table data and graph data.  
 
 ## Technology and Tools
 
-  * `Libraries` - React,react-dom
+  * `Library` - React
   * `CSS Framework` - <https://purecss.io/>
   * `Charting Library` - <https://recharts.org/>
   * `HTTP Client`- Axios
