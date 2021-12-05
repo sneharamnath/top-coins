@@ -2,6 +2,8 @@
 
 Simple analysis of crypto assets React App.
 
+![Peek 2021-12-05 16-40](https://user-images.githubusercontent.com/7655624/144744204-1bfb7986-c199-4fd1-a369-06610b3fc2b2.gif)
+
 ## Install Dependencies
 
 1. Install Node
